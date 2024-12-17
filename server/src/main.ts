@@ -8,9 +8,15 @@ import "../database/checkConnection";
 
 // Import the Express application from ./app
 import app from "./app";
+import express, { type Request, type Response } from "express";
+
 
 // Get the port from the environment variables
 const port = process.env.APP_PORT;
+
+app.get("/", (_req : Request, res : Response) => {
+  res.send("Welcome to Wild Series!");
+});
 
 // Start the server and listen on the specified port
 app
