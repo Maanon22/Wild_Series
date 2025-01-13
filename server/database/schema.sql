@@ -25,7 +25,7 @@ create table program(
   year int not null,
   category_id int unsigned not null,
   foreign key(category_id) references category(id)
-);
+);  
 
 insert into user(id, email, password)
 values
